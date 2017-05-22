@@ -1,0 +1,21 @@
+version: "3"
+services:
+  bazel:
+    image: sr1994lu/bazel:latest
+    container_name: "bazel"
+    tty: true
+    volumes:
+      - ./app:/usr/src
+    working_dir: /usr/src
+    command: bash -c "yarn install && bash"
+  express:
+    image: sr1994lu/bazel:latest
+    container_name: "express"
+    ports:
+      - 3000:3000
+    volumes:
+      - ./server/app:/usr/src
+    working_dir: /usr/src
+    command: bash -c "yarn install && ./node_modules/.bin/nodemon app"
+networks:
+  default:
