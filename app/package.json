@@ -1,0 +1,13 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.0"
+  },
+  "scripts": {
+    "babe": "rm -rf ./js/* && babel src --out-dir js --source-maps inline"
+  }
+}
