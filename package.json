@@ -1,0 +1,11 @@
+{
+  "name": "tobe",
+  "version": "1.0.0",
+  "description": "tobe",
+  "main": "index.js",
+  "author": "Shunsuke NISHINO",
+  "license": "MIT",
+  "devDependencies": {
+    "vue-cli": "^2.8.2"
+  }
+}
