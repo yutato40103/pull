@@ -16,6 +16,6 @@ services:
     volumes:
       - ./server/app:/usr/src
     working_dir: /usr/src
-    command: bash -c "yarn install && ./node_modules/.bin/nodemon app"
+    command: bash -c "yarn install && yarn run start"
 networks:
   default:
