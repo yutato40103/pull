@@ -7,15 +7,16 @@ services:
     volumes:
       - ./app:/usr/src
     working_dir: /usr/src
-    command: bash -c "yarn install && bash"
+    command: bash -c "bash"
   express:
     image: sr1994lu/bazel:latest
     container_name: "express"
+    tty: true
     ports:
       - 3000:3000
     volumes:
       - ./server/app:/usr/src
     working_dir: /usr/src
-    command: bash -c "yarn install && yarn run start"
+    command: bash -c "npm start"
 networks:
   default:

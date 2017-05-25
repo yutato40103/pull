@@ -1,4 +1,4 @@
-$.ajax('http://localhost:3000/users', {
+$.ajax('http://192.168.99.100:3000/users', {
   type: 'get',
   dataType: 'json',
 }).done((json) => {
@@ -26,4 +26,11 @@ const vm = new Vue({
     },
   },
 });
+var footer = new Vue({
+  el: 'footer',
+  data: {
+    footer: 'HAL&Copy;',
+  }
+});
+
 
